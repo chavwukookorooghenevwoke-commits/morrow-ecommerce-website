@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Morrow is a thoughtfully designed e-commerce storefront demo for modern home essentials. Explore furniture, lighting and considered objects.">
+  <meta name="theme-color" content="#f8f6f1">
+  <title>Morrow — Everyday, beautifully considered.</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="products.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="announcement" role="note">
+    <div class="container-xl announcement-inner">
+      <span class="announcement-side">MADE FOR THE WAY YOU LIVE</span>
+      <span class="announcement-center"><i class="fa-solid fa-sparkles" aria-hidden="true"></i> Complimentary UK delivery on orders over £100</span>
+      <span class="announcement-side announcement-right">FRONT-END PORTFOLIO DEMO</span>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container-xl header-inner">
+      <button class="icon-button mobile-only menu-toggle" id="menu-open" aria-label="Open navigation menu" aria-controls="mobile-menu" aria-expanded="false"><i class="fa-solid fa-bars-staggered" aria-hidden="true"></i></button>
+      <a class="brand" href="#top" aria-label="Morrow homepage">morrow<span class="brand-dot">.</span></a>
+      <nav class="desktop-nav" aria-label="Primary navigation">
+        <a href="#shop" class="nav-link active">Shop all</a>
+        <a href="#categories" data-category-nav="Furniture" class="nav-link">Furniture</a>
+        <a href="#categories" data-category-nav="Lighting" class="nav-link">Lighting</a>
+        <a href="#categories" data-category-nav="Décor" class="nav-link">Décor</a>
+        <a href="#story" class="nav-link">Our story</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" id="search-open" aria-label="Search products" title="Search products"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i></button>
+        <button class="icon-button wishlist-trigger" id="wishlist-toggle" aria-label="Show saved items" aria-pressed="false" title="Saved items"><i class="fa-regular fa-heart" aria-hidden="true"></i><span class="count-dot" id="wishlist-count" hidden>0</span></button>
+        <button class="icon-button bag-trigger" id="cart-open" aria-label="Open shopping bag" aria-controls="cart-drawer" aria-expanded="false" title="Shopping bag"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i><span class="count-dot" id="cart-count" hidden>0</span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu" hidden>
+    <div class="mobile-menu-inner container-xl">
+      <div class="mobile-menu-top"><span>Explore Morrow</span><button class="icon-button" id="menu-close" aria-label="Close menu"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
+      <a href="#shop" data-close-menu>Shop all <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+      <a href="#shop" data-menu-category="Furniture">Furniture <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="#shop" data-menu-category="Lighting">Lighting <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="#shop" data-menu-category="Décor">Décor <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="#shop" data-menu-category="Textiles">Textiles <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <a href="#story" data-close-menu>Our story <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      <span class="mobile-menu-caption">GOOD THINGS TAKE SHAPE HERE.</span>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container-xl hero-inner">
+        <div class="hero-content">
+          <div class="eyebrow hero-eyebrow"><span class="eyebrow-line"></span> THE ART OF FEELING AT HOME</div>
+          <h1 id="hero-title">Everyday,<br><em>beautifully</em><br>considered.</h1>
+          <p>Thoughtfully chosen pieces for the spaces, rituals and little moments that make a house feel like yours.</p>
+          <div class="hero-buttons"><a class="btn-main" href="#shop">Explore the collection <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a><a class="text-link" href="#story">Our philosophy <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div>
+          <div class="hero-footnote"><span class="round-icon"><i class="fa-solid fa-leaf" aria-hidden="true"></i></span><span>Less ordinary. More meaningful.<br><strong>Objects with a point of view.</strong></span></div>
+        </div>
+        <div class="hero-media">
+          <img class="hero-photo" src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1300&q=85&fit=crop&auto=format" alt="Sunlit contemporary living room with inviting furniture and natural tones" fetchpriority="high" onerror="this.src='image-fallback.svg'">
+          <div class="hero-overlay-label"><span>THE SLOW LIVING EDIT</span><span>001 — 026</span></div>
+          <div class="hero-stamp" aria-hidden="true"><span>GOOD<br>DESIGN<br>DAILY</span><i class="fa-solid fa-arrow-trend-up"></i></div>
+        </div>
+      </div>
+      <div class="hero-watermark" aria-hidden="true">SLOW DOWN. SETTLE IN.</div>
+    </section>
+
+    <section class="benefits" aria-label="Store highlights">
+      <div class="container-xl benefits-inner">
+        <div class="benefit"><i class="fa-solid fa-box-open" aria-hidden="true"></i><span>Considered collections</span></div>
+        <span class="benefit-separator" aria-hidden="true"></span>
+        <div class="benefit"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i><span>Delivery estimator in cart</span></div>
+        <span class="benefit-separator" aria-hidden="true"></span>
+        <div class="benefit"><i class="fa-regular fa-heart" aria-hidden="true"></i><span>Save the pieces you love</span></div>
+        <span class="benefit-separator" aria-hidden="true"></span>
+        <div class="benefit"><i class="fa-solid fa-lock" aria-hidden="true"></i><span>Safe, simulated checkout</span></div>
+      </div>
+    </section>
+
+    <section class="section categories-section" id="categories" aria-labelledby="categories-title">
+      <div class="container-xl">
+        <div class="section-heading centered reveal"><div class="eyebrow">THE COLLECTIONS</div><h2 id="categories-title">Make room for <em>more.</em></h2><p>Explore the details that turn everyday living into something special.</p></div>
+        <div class="category-grid">
+          <button class="category-card category-large reveal" data-category="Furniture">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=850&q=82&fit=crop&auto=format" alt="Comfortable, modern furniture in a bright living room" loading="lazy" onerror="this.src='image-fallback.svg'">
+            <span class="category-shade"></span><span class="category-caption"><span><small>01 / THE EVERYDAY</small><strong>Furniture</strong></span><span class="circle-arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></span>
+          </button>
+          <button class="category-card reveal" data-category="Lighting">
+            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=750&q=82&fit=crop&auto=format" alt="Warm lights illuminating a welcoming home interior" loading="lazy" onerror="this.src='image-fallback.svg'">
+            <span class="category-shade"></span><span class="category-caption"><span><small>02 / SET THE MOOD</small><strong>Lighting</strong></span><span class="circle-arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></span>
+          </button>
+          <button class="category-card reveal" data-category="Décor">
+            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=750&q=82&fit=crop&auto=format" alt="Decorative handmade ceramic vessels and home accessories" loading="lazy" onerror="this.src='image-fallback.svg'">
+            <span class="category-shade"></span><span class="category-caption"><span><small>03 / FINISHING TOUCHES</small><strong>Décor</strong></span><span class="circle-arrow"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></span></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products-section" id="shop" aria-labelledby="shop-title">
+      <div class="container-xl">
+        <div class="shop-heading reveal"><div><div class="eyebrow">THE PIECES WE LOVE</div><h2 id="shop-title">The good <em>things.</em></h2><p>Discover the collection. Find your favourites.</p></div><div class="shop-count" id="shop-total-label">12 thoughtfully chosen pieces <i class="fa-solid fa-arrow-down-long" aria-hidden="true"></i></div></div>
+        <div class="shop-controls" id="shop-controls">
+          <div class="filter-list" role="group" aria-label="Filter by category">
+            <button class="filter-chip active" data-filter="All" aria-pressed="true">All pieces</button>
+            <button class="filter-chip" data-filter="Furniture" aria-pressed="false">Furniture</button>
+            <button class="filter-chip" data-filter="Lighting" aria-pressed="false">Lighting</button>
+            <button class="filter-chip" data-filter="Décor" aria-pressed="false">Décor</button>
+            <button class="filter-chip" data-filter="Textiles" aria-pressed="false">Textiles</button>
+          </div>
+          <div class="shop-tools"><label class="shop-search"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span class="visually-hidden">Search products</span><input id="product-search" type="search" placeholder="Search pieces..." autocomplete="off" maxlength="80"></label><label class="sort-select"><span class="visually-hidden">Sort products</span><select id="sort-products"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A to Z</option><option value="new">Newest first</option></select><i class="fa-solid fa-chevron-down" aria-hidden="true"></i></label></div>
+        </div>
+        <div class="results-note" id="results-note" aria-live="polite"></div>
+        <div class="product-grid" id="product-grid" aria-live="polite" aria-label="Product results"></div>
+        <div class="empty-results" id="empty-results" hidden><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><h3>Nothing quite like that yet.</h3><p>Try another search, or take a look at the full collection.</p><button class="btn-main" id="clear-filters">Show all pieces <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button></div>
+        <div class="shop-bottom" id="shop-bottom"><span id="shown-count">Showing 8 of 12 pieces</span><button class="btn-outline" id="load-more">Show more pieces <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></button></div>
+      </div>
+    </section>
+
+    <section class="story-section" id="story" aria-labelledby="story-title">
+      <div class="container-xl story-inner">
+        <div class="story-photo-wrap reveal"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1050&q=82&fit=crop&auto=format" loading="lazy" alt="Quiet, carefully styled living space in natural tones" onerror="this.src='image-fallback.svg'"><span class="story-photo-tag">THE ART OF THE EVERYDAY</span></div>
+        <div class="story-content reveal"><div class="eyebrow"><span class="eyebrow-line"></span> A NOTE FROM MORROW</div><h2 id="story-title">A home isn't made in a day. <em>It's made in moments.</em></h2><p>We believe the most beautiful spaces are the ones you actually live in. Spaces that feel collected, not decorated. Calm, but never cold. Thoughtful, without trying too hard.</p><p>Morrow is a fictional lifestyle brand created as a front-end development portfolio project — a place to explore both good design and the details of a well-made shopping experience.</p><a href="#shop" class="btn-main btn-main-light">Find your something <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a><div class="story-signature">Live a little slower. <span>— morrow.</span></div></div>
+      </div>
+    </section>
+
+    <section class="journal-section section" aria-labelledby="journal-title"><div class="container-xl"><div class="journal-content reveal"><div><div class="eyebrow">A LITTLE INSPIRATION</div><h2 id="journal-title">Good spaces.<br><em>Good stories.</em></h2><p>Ideas for slowing down, rearranging the familiar and making more room for the everyday.</p><a class="text-link" href="#shop">Discover the collection <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a></div><div class="journal-image"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1000&q=82&fit=crop&auto=format" loading="lazy" alt="Soft, minimalist home interior styling" onerror="this.src='image-fallback.svg'"><span>THE MORROW JOURNAL / 001</span></div></div></div></section>
+
+    <section class="newsletter" aria-labelledby="newsletter-title"><div class="container-xl newsletter-inner"><div><div class="eyebrow">LET'S KEEP IN TOUCH</div><h2 id="newsletter-title">A little good in <em>your inbox.</em></h2><p>Occasional notes on considered spaces, beautiful objects and new discoveries.</p></div><form id="newsletter-form" class="newsletter-form"><label class="visually-hidden" for="newsletter-email">Email address</label><input id="newsletter-email" type="email" placeholder="Your email address" autocomplete="email" maxlength="120" required><button type="submit" aria-label="Join the demo newsletter"><i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><span class="newsletter-caption">Demo sign-up only. No email is sent or stored.</span></form></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container-xl"><div class="footer-main"><div class="footer-brand"><a class="brand" href="#top">morrow<span class="brand-dot">.</span></a><p>Everyday, beautifully considered.<br>An interactive e-commerce portfolio project.</p><div class="footer-social"><a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub homepage (replace with your repository link)"><i class="fa-brands fa-github" aria-hidden="true"></i></a><a href="https://unsplash.com/" target="_blank" rel="noopener noreferrer" aria-label="Unsplash photo credits"><i class="fa-solid fa-camera" aria-hidden="true"></i></a></div></div><div class="footer-column"><h3>EXPLORE</h3><a href="#shop">Shop all</a><a href="#categories">Collections</a><a href="#story">Our story</a></div><div class="footer-column"><h3>THE DEMO</h3><button id="footer-cart-open">Your bag</button><button id="footer-wishlist-open">Saved items</button><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div><div class="footer-column"><h3>PLEASE NOTE</h3><p>This is a portfolio demonstration. Products, prices, delivery and checkout are fictional. No orders or payments are processed.</p></div></div><div class="footer-bottom"><span>© <span id="year"></span> Morrow Studio. Designed for learning.</span><span>MADE WITH <i class="fa-solid fa-heart" aria-hidden="true"></i> JAVASCRIPT, BOOTSTRAP & CSS</span><a href="#top">Back to top <i class="fa-solid fa-arrow-up-long" aria-hidden="true"></i></a></div></div></footer>
+
+  <div class="modal-backdrop-custom" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1" hidden><div class="drawer-top"><div><span class="eyebrow">THE LITTLE THINGS</span><h2 id="cart-title">Your bag <span id="drawer-cart-count">(0)</span></h2></div><button class="icon-button close-drawer" id="cart-close" aria-label="Close shopping bag"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div><div class="cart-items" id="cart-items"></div><div class="drawer-footer" id="cart-footer"><div class="delivery-message" id="delivery-message"></div><div class="subtotal-row"><span>Subtotal</span><strong id="cart-subtotal">£0.00</strong></div><div class="shipping-row"><span>Estimated delivery</span><span id="cart-shipping">£6.50</span></div><p class="cart-note">Prices include VAT. Delivery estimated for demonstration only.</p><button class="btn-main checkout-btn" id="checkout-open">Continue to demo checkout <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><button class="continue-btn" id="continue-shopping">Keep exploring</button></div></aside>
+
+  <section class="dialog-modal quickview" id="quickview" role="dialog" aria-modal="true" aria-labelledby="quickview-title" tabindex="-1" hidden><button class="icon-button dialog-close" data-close-modal aria-label="Close product details"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><div class="quickview-grid"><div class="quickview-image-wrap"><img id="quickview-image" src="image-fallback.svg" alt=""></div><div class="quickview-info"><div class="eyebrow" id="quickview-category"></div><h2 id="quickview-title"></h2><div class="quickview-rating" id="quickview-rating"></div><div class="quickview-price" id="quickview-price"></div><p id="quickview-description"></p><div class="quickview-meta"><span><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Carefully chosen</span><span><i class="fa-solid fa-box" aria-hidden="true"></i> Demo collection</span></div><label class="qty-label" for="quickview-qty">Quantity</label><div class="quantity-control"><button id="quickview-minus" aria-label="Decrease quantity">−</button><input id="quickview-qty" type="number" min="1" max="20" value="1" inputmode="numeric" aria-label="Product quantity"><button id="quickview-plus" aria-label="Increase quantity">+</button></div><button class="btn-main quickview-add" id="quickview-add"><i class="fa-solid fa-bag-shopping" aria-hidden="true"></i> Add to bag <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><p class="quickview-note">This is a portfolio demo; products are not available for purchase.</p></div></div></section>
+
+  <section class="dialog-modal checkout-modal" id="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title" tabindex="-1" hidden><button class="icon-button dialog-close" data-close-modal aria-label="Close demo checkout"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button><div id="checkout-content"><span class="eyebrow">YOUR ALMOST-ORDER</span><h2 id="checkout-title">A thoughtful <em>checkout.</em></h2><p class="checkout-description">This is a simulation for a front-end portfolio. Use invented test details only. No payment is taken and no data is sent anywhere.</p><div class="checkout-summary" id="checkout-summary"></div><form id="checkout-form" novalidate><div class="form-grid"><label>Full name <input id="checkout-name" name="name" type="text" placeholder="Alex Example" minlength="2" maxlength="80" required autocomplete="off"></label><label>Email <input id="checkout-email" name="email" type="email" placeholder="alex@example.com" maxlength="120" required autocomplete="off"></label><label class="full-row">Delivery address <input id="checkout-address" name="address" type="text" placeholder="10 Example Street" minlength="5" maxlength="160" required autocomplete="off"></label><label>Town / City <input id="checkout-city" name="city" type="text" placeholder="Exampletown" minlength="2" maxlength="80" required autocomplete="off"></label><label>Postcode <input id="checkout-postcode" name="postcode" type="text" placeholder="AB1 2CD" minlength="4" maxlength="12" required autocomplete="off"></label></div><button type="submit" class="btn-main checkout-place">Place demo order <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button><p class="checkout-disclaimer"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Simulated order only. Nothing is purchased or delivered.</p></form></div></section>
+
+  <div class="search-modal" id="search-modal" role="dialog" aria-modal="true" aria-label="Search Morrow products" tabindex="-1" hidden><div class="container-xl search-modal-inner"><div class="search-modal-top"><span class="brand">morrow<span class="brand-dot">.</span></span><button class="icon-button" id="search-close" aria-label="Close search"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div><label class="search-modal-field"><i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i><span class="visually-hidden">Search for a product</span><input id="global-search" type="search" placeholder="What are you looking for?" maxlength="80" autocomplete="off"></label><div class="search-hint">TRY SEARCHING FOR</div><div class="suggestions"><button data-suggestion="chair">Chairs <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button><button data-suggestion="lamp">Lamps <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button><button data-suggestion="ceramic">Ceramics <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></button></div><p class="search-footer-note">Press Enter to explore matching products.</p></div></div>
+  <div class="toast-notice" id="toast" role="status" aria-live="polite"><i class="fa-solid fa-circle-check" aria-hidden="true"></i><span id="toast-text"></span><button id="toast-close" aria-label="Dismiss notification"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button></div>
+</body>
+</html>
